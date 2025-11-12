@@ -3,11 +3,9 @@ using namespace std;
 
 typedef long long ll;
 const int INF = 1e8;
+const ll MOD = 1e9 + 7;
 
 void solve() {
-    
-    int n; cin >> n;
-
     
 }
 
@@ -18,3 +16,14 @@ int main() {
     solve();
     return 0;
 }
+
+/*
+State:
+
+Transition:
+Base:
+
+Answer:
+
+Time:
+*/

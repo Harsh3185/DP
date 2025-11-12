@@ -12,7 +12,18 @@ void solve() {
     for(auto& x : h) cin >> x;
     for(auto& x : s) cin >> x;
 
-    
+    vector<vector<ll>> dp(x + 1 , vector<ll> (n + 1, 0));
+
+    for(ll i = 1; i <= x; i++) {
+        for(ll j = n - 1; j >= 0; j--) {
+            if(i - h[j] >= 0) {
+                dp[i][j] = max(dp[i][j] , s[j] + dp[i - h [ j]][j + 1]);
+            }
+            dp[i][j] = max(dp[i][j] , dp[i][j + 1]);
+        }
+    }
+
+    cout << dp[x][0] << "\n";
     
 }
 
